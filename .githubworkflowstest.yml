@@ -1,0 +1,34 @@
+name: Simple Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Print message
+        run: echo " This is the first simple workflow"
+
+  deploy:
+     needs: build 
+     runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+
+
+       name: Deploy application
+       run: 
+          echo "starting deployment"
+
+
+
+   
+     
